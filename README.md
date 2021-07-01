@@ -17,7 +17,7 @@ yarn add react-native-reanimated react-native-gesture-handler
 
 ```js
 import {
-  SwipableItem,
+  SwipeableItem,
   withSwipeableContext,
   useSwipeableContext,
 } from 'react-native-swipeable';
@@ -31,16 +31,16 @@ function YourComponent() {
 
     const renderLeftActions = useCallback(() => {
         return (
-            <SwipableItem.Button onPress={handlePinPress}>
+            <SwipeableItem.Button onPress={handlePinPress}>
                 <View style={[styles.delete, { backgroundColor: 'yellow' }]}>
                     <Text>Pin</Text>
                 </View>
-            </SwipableItem.Button>
+            </SwipeableItem.Button>
         );
     }, [handlePinPress]);
 
     return (
-        <SwipableItem
+        <SwipeableItem
             containerStyle={styles.container}
             renderRightActions={renderRightActions}
             renderLeftActions={renderLeftActions}
@@ -59,7 +59,7 @@ function YourComponent() {
                 </Text>
             </View>
             </View>
-        </SwipableItem>
+        </SwipeableItem>
     );
 }
 

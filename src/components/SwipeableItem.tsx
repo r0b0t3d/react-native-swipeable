@@ -33,7 +33,7 @@ type Props = {
   onStartDrag?: () => void;
 };
 
-export default function SwipableItem({
+export default function SwipeableItem({
   containerStyle,
   children,
   renderRightActions,
@@ -197,7 +197,7 @@ function SwipeableButton({
   );
 }
 
-SwipableItem.Button = SwipeableButton;
+SwipeableItem.Button = SwipeableButton;
 
 const styles = StyleSheet.create({
   container: {},

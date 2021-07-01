@@ -3,7 +3,7 @@ import { Alert, Image, StyleSheet, Text, View } from 'react-native';
 import type Animated from 'react-native-reanimated';
 import { useDerivedValue } from 'react-native-reanimated';
 import {
-  SwipableItem,
+  SwipeableItem,
   withSwipeableContext,
   useSwipeableContext,
 } from 'react-native-swipeable';
@@ -45,32 +45,32 @@ function PersonItem({ item, activeItem }: Props) {
   const renderRightActions = useCallback(() => {
     return (
       <>
-        <SwipableItem.Button onPress={handleDeletePress}>
+        <SwipeableItem.Button onPress={handleDeletePress}>
           <View style={styles.delete}>
             <Text>Delete</Text>
           </View>
-        </SwipableItem.Button>
-        <SwipableItem.Button onPress={handleEditPress}>
+        </SwipeableItem.Button>
+        <SwipeableItem.Button onPress={handleEditPress}>
           <View style={[styles.delete, { backgroundColor: 'green' }]}>
             <Text>Edit</Text>
           </View>
-        </SwipableItem.Button>
+        </SwipeableItem.Button>
       </>
     );
   }, [handleDeletePress, handleEditPress]);
 
   const renderLeftActions = useCallback(() => {
     return (
-      <SwipableItem.Button onPress={handlePinPress}>
+      <SwipeableItem.Button onPress={handlePinPress}>
         <View style={[styles.delete, { backgroundColor: 'yellow' }]}>
           <Text>Pin</Text>
         </View>
-      </SwipableItem.Button>
+      </SwipeableItem.Button>
     );
   }, [handlePinPress]);
 
   return (
-    <SwipableItem
+    <SwipeableItem
       containerStyle={styles.container}
       renderRightActions={renderRightActions}
       renderLeftActions={renderLeftActions}
@@ -87,7 +87,7 @@ function PersonItem({ item, activeItem }: Props) {
           </Text>
         </View>
       </View>
-    </SwipableItem>
+    </SwipeableItem>
   );
 }
 
