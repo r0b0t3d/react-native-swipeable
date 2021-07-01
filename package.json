@@ -1,6 +1,6 @@
 {
   "name": "@r0b0t3d/react-native-swipeable",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Swipeable component for react native powered by Reanimated 2 and Gesture Handler",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
